@@ -1,0 +1,11 @@
+dist/
+node_modules/
+.idea/
+.tmp/
+*.log*
+.DS_Store
+.module-cache
+_nogit
+.babel-cache
+.vscode
+.history

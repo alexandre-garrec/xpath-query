@@ -1,0 +1,53 @@
+{
+  "name": "xpath-query",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "$(npm bin)/babel src --out-dir dist",
+    "test": "$(npm bin)/mocha --compilers js:babel-register",
+    "lint": "$(npm bin)/eslint src --ext .js",
+    "prepush": "npm test",
+    "precommit": "npm run lint",
+    "clean": "rimraf dist",
+    "prepublish": "npm run clean && npm run build --kill"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "eslint": "^2.11.1",
+    "husky": "^0.11.4",
+    "mocha": "^2.5.3",
+    "chai": "^3.5.0",
+    "rimraf": "^2.5.2"
+  },
+  "babel": {
+    "presets": ["es2015", "stage-0"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandre-garrec/xpath-query.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "xpath",
+    "query",
+    "dom",
+    "xpath-query",
+    "query-xpath"
+  ],
+  "author": "alexandre-garrec <garrec.alexandre@gmail.com> (https://github.com/alexandre-garrec)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexandre-garrec/xpath-query/issues"
+  },
+  "homepage": "https://github.com/alexandre-garrec/xpath-query#readme",
+  "dependencies": {
+    "invariant": "^2.2.1"
+  }
+}
